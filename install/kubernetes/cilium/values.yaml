@@ -1112,6 +1112,10 @@ eni:
   # Adds annotation to service account if managed by Helm.
   # See https://github.com/aws/amazon-eks-pod-identity-webhook
   iamRole: ""
+  # -- if iamRole is set
+  # cilium operator will use IRSA to communicate with AWS for which AWS Region is required along with iamRole
+  # https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html
+  awsRegion: ""
   # -- Filter via subnet IDs which will dictate which subnets are going to be used to create new ENIs
   # Important note: This requires that each instance has an ENI with a matching subnet attached
   # when Cilium is deployed. If you only want to control subnets for ENIs attached by Cilium,

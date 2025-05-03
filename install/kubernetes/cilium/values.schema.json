@@ -1838,6 +1838,9 @@
         "iamRole": {
           "type": "string"
         },
+        "awsRegion": {
+          "type": "string"
+        },
         "instanceTagsFilter": {
           "items": {},
           "type": "array"
